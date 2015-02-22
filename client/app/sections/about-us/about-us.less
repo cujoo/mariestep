@@ -1,0 +1,142 @@
+@fb-color: #3B5998;
+
+.about-us-section {
+	.col-sm-6 {
+		padding: 0px 15px 0 15px;
+	}
+	@media(min-width:767px) {
+		padding: 60px 15px 0 15px;
+	}
+	.about-us-figure {
+		height: 300px;
+		max-width: 350px;
+		margin: auto;
+		position: relative;
+		.social-btn-container {
+			position: absolute;
+			top: 0px;
+			left: 0;
+			margin: 0 auto;
+			width: 100%;
+			height: 100%;
+			background: fade(@dark, 50%);
+			.social-btn-box {
+				display: inline-block;
+				width: 50px;
+				height: 50px;
+				border: 2px solid fade(@light, 60%);
+				border-radius: 25px;
+				margin: 15px;
+				position: relative;
+				overflow: hidden;		
+				a {
+					color: @light;
+					font-size: 20px;
+					line-height: 50px;
+					display: inline-block;
+					width: 70px;
+					height: 70px;
+					position: absolute;
+					top: 0px;
+					left: -12px;
+					@media(min-width:767px) {
+						i.animated {
+							-webkit-transition-property: -webkit-transform;
+							-webkit-transition-duration: 1s;
+							-moz-transition-property: -moz-transform;
+							-moz-transition-duration: 1s;
+						}
+						&:hover {
+							i.animated {
+								-webkit-animation-name: pulse;
+								-moz-animation-name: pulse;
+								-webkit-animation-duration: 1.5s;
+								-moz-animation-duration: 1.5s;
+								-webkit-animation-iteration-count: infinite;
+								-moz-animation-iteration-count: infinite;
+								-webkit-animation-timing-function: linear;
+								-moz-animation-timing-function: linear;
+							}
+						}
+					}
+				}
+			}
+			.envelope-btn {
+				background: fade(@light, 10%);
+				@media(min-width:767px) {
+					background: transparent;
+					&:hover,
+					&:focus {
+						color: @light;  
+						background: fade(@light, 10%);
+					}
+				}
+			}			
+			.facebook-btn {
+				background: fade(@fb-color, 70%);
+				@media(min-width:767px) {
+					background: transparent;
+					&:hover,
+					&:focus {
+						color: @light;  
+						background: fade(@fb-color, 70%);
+					}
+				}
+			}
+		}
+		figure {
+			border: 1px solid fade(@light, 60%);
+			border-radius: 8px;
+			box-shadow: 0px 0px 90px fade(@light, 20%);
+			img {
+				width: 240px;
+				height: 240px;	
+			}
+		}
+		figcaption {
+			text-align: center;
+			padding-top: 240px;
+			p {
+				font-size: 1.6em;
+				padding-top: 20px;
+				i {
+					padding: 0px 20px;
+					color: @dark;
+					text-shadow: 0 0 20px @light;
+				}
+			}
+		}
+		&:hover {
+			figure {
+
+			}
+			figcaption {
+				
+			}
+		}
+	}
+	#stefano-info {
+		.envelope-btn-container {
+			position: inherit;
+			top: 100px;
+			left: 160px;
+		}
+		.facebook-btn-container {
+			position: inherit;
+			top: 160px;
+			left: 160px;
+		}
+	}
+	#marisol-info {
+		.envelope-btn-container {
+			position: inherit;
+			top: 100px;
+			right: 160px;
+		}		
+		.facebook-btn-container {
+			position: inherit;
+			top: 160px;
+			right: 160px;
+		}
+	}
+}

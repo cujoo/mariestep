@@ -1,0 +1,22 @@
+.flip {
+	float: left;
+	overflow: hidden;
+	padding-left: 50px;
+}
+.flip-none { 
+	position: absolute;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	transition: -webkit-transform .8s;
+	transition: transform .8s;
+	-webkit-transform: perspective( 800px ) rotateY( 0deg );
+	transform: perspective( 800px ) rotateY( 0deg );
+}
+.flip-rotate-left {
+	-webkit-transform:  perspective(800px) rotateY( 180deg );
+	transform:  perspective(800px) rotateY( 180deg );
+}
+.flip-rotate-right {
+	-webkit-transform:  perspective(800px) rotateY( -180deg );
+	transform:  perspective(800px) rotateY( -180deg );
+}

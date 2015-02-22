@@ -1,0 +1,8 @@
+{
+    "jscodehints.detectedExclusions": [
+        "C:/Users/dmancini/Desktop/s&m/marriage-event/client/bower_components/jquery/src/manipulation/var/rcheckableType.js",
+        "C:/Users/dmancini/Desktop/s&m/marriage-event/client/bower_components/jquery/src/event.js",
+        "C:/Users/dmancini/Desktop/s&m/marriage-event/client/bower_components/jquery/src/offset.js",
+        "C:/Users/dmancini/Desktop/s&m/marriage-event/client/bower_components/jquery/src/sizzle/dist/sizzle.js"
+    ]
+}

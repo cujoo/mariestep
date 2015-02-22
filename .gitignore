@@ -41,3 +41,9 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+.tmp
+node_modules
+client/bower_components
+*.sublime-project
+*.sublime-workspace
