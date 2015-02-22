@@ -45,5 +45,6 @@ Temporary Items
 .tmp
 node_modules
 client/bower_components
+dist
 *.sublime-project
 *.sublime-workspace
