@@ -105,10 +105,17 @@
 	position: absolute;
 	bottom: 0px;
 	padding-bottom: 5px;
+	font-size: 1.1em;
+	i {
+		font-size: 0.7em;
+		@media(min-width: @screen-sm-min) {
+			font-size: 1em;
+		}
+	}
 
 	@media(min-width: @screen-sm-min) {
 		padding-bottom: 20px;
-		font-size: 1.2;
+		font-size: 1.2em;
 	}
 }
 

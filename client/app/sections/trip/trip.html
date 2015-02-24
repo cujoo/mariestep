@@ -35,7 +35,8 @@
 							<div class="col-xs-6">
 								<div ng-show="stage.id==1">
 									<span class="pull-left"><i class="fa fa-info"></i></span>
-									<a href ng-click="controller.selectStage(stage.id-1)">Torna all'intro</a>
+									<a href ng-click="controller.selectStage(stage.id-1)" class="hidden-xs hidden-sm">Torna all'intro</a>
+									<a href ng-click="controller.selectStage(stage.id-1)" class="hidden-md hidden-lg">Intro</a>
 								</div>
 								<div ng-show="stage.id>1">
 									<span class="pull-left"><i class="fa fa-angle-left"></i></span>
