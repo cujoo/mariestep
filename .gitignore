@@ -48,3 +48,5 @@ client/bower_components
 dist
 *.sublime-project
 *.sublime-workspace
+
+client/assets/images/orig_*.jpg

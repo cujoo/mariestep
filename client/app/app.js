@@ -5,8 +5,7 @@ angular.module('marriageEventApp', [
 	'ngResource',
 	'ngSanitize',
 	'ui.router',
-	'ui.bootstrap',
-	'angular-carousel'
+	'ui.bootstrap'
 ])
 	.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
 		$urlRouterProvider

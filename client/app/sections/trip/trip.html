@@ -1,11 +1,17 @@
 <div class="trip-section">
 	<div class="row container">
-		<div class="col-lg-8 col-lg-offset-2" ng-controller="TripCtrl">
-			<ul  rn-carousel  rn-carousel-controls style="height: 250px;">
-				<li ng-repeat="slide in slides">
-					<img class="image" ng-src="{{slide.image}}" style="margin:auto;">
-				</li>
-			</ul>
+		<div class="col-lg-10 col-lg-offset-1" ng-controller="TripCtrl">
+			<div class="col-sm-6 col-md-4 stages-list" scrollable>
+				<ul class="list-group">
+					<li class="list-group-item" ng-repeat="stage in stages">
+						<span class="badge">14</span>
+						<a href-void><strong>{{stage.name}}</strong></a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-sm-6 col-md-8">
+				content
+			</div>
 		</div>
 	</div>
 </div>

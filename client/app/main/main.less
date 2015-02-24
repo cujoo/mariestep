@@ -5,7 +5,7 @@
 	padding: 100px 0;
 	text-align: center;
 	color: @light;
-	background: url(../assets/images/intro-rose.jpg) no-repeat bottom center scroll;
+	background: url(../assets/images/intro-bg.jpg) no-repeat bottom right scroll;
 	background-color: @dark;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -25,7 +25,7 @@
 	}
 }
 
-@media(min-width:767px) {
+@media(min-width: @screen-sm-min) {
 	.intro {
 		height: 100%;
 		padding: 0;
@@ -114,7 +114,7 @@
 }
 
 .content-section {
-	padding-top: 100px;
+	padding-top: 140px;
 }
 
 #map {
@@ -123,9 +123,9 @@
 	margin-top: 100px;
 }
 
-@media(min-width: 767px) {
+@media(min-width: @screen-sm-min) {
 	.content-section {
-		padding-top: 210px;
+		padding-top: 180px;
 	}
 
 	#map {
@@ -139,7 +139,7 @@
 		padding-top: 410px;
 	}
 
-	.download-section {
+	.trip-section {
 		padding: 100px 0;
 	}
 
@@ -175,13 +175,13 @@ ul.banner-social-buttons {
 	margin-top: 0;
 }
 
-@media(max-width:1199px) {
+@media(max-width: @screen-lg-min) {
 	ul.banner-social-buttons {
 		margin-top: 15px;
 	}
 }
 
-@media(max-width:767px) {
+@media(max-width: @screen-sm-min) {
 	ul.banner-social-buttons {
 		li {
 			display: block;
