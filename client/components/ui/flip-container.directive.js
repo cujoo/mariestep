@@ -4,27 +4,27 @@ angular.module('marriageEventApp')
 	.directive('flipContainer', function() {
 		return {
 			restrict: 'E',
-			controller: function($scope, $element, $attrs) {
+			controller: function(/*$scope, $element, $attrs*/) {
 				var self = this;
 				self.front = null;
 				self.rear = null;
 				self.verse = 'left'; 
 			
 				function showFront(){
-					if (self.verse == 'left') {
+					if (self.verse === 'left') {
 						self.front.removeClass('flip-rotate-right');
 						self.rear.addClass('flip-rotate-left');
-					} else if (self.verse == 'right') {
+					} else if (self.verse === 'right') {
 						self.front.removeClass('flip-rotate-left');
 						self.rear.addClass('flip-rotate-right');
 					}
 				}
 			
 				function showBack(){
-					if (self.verse == 'left') {
+					if (self.verse === 'left') {
 						self.rear.removeClass('flip-rotate-left');
 						self.front.addClass('flip-rotate-right');
-					} else if (self.verse == 'right') {
+					} else if (self.verse === 'right') {
 						self.rear.removeClass('flip-rotate-right');
 						self.front.addClass('flip-rotate-left');
 					}          
@@ -39,7 +39,7 @@ angular.module('marriageEventApp')
 					
 					self.front.on('click', showBack);
 					self.rear.on('click', showFront);
-				}      
+				};
 			},
 			link: function($scope, $element, $attrs, $ctrl) {
 				$element.addClass('flip');
@@ -49,29 +49,31 @@ angular.module('marriageEventApp')
 					console.error('[flip-container]: front and/or rear container not defined!');
 				}
 			}
-		}
+		};
 	})
 	.directive('front', function() {
 		return {
 			restrict: 'E',
 			require: '^flipContainer',
 			link: function(scope, element, attrs, $ctrl) {
-				if (!$ctrl.front) { $ctrl.front = element }
-				else {
+				if (!$ctrl.front) { 
+					$ctrl.front = element;
+				} else {
 					console.error('[flip-container]: front container is already defined!');
 				}
 			}
-		}
+		};
 	})
 	.directive('rear', function() {
 		 return {
 			restrict: 'E',
 			require: '^flipContainer',
 			link: function(scope, element, attrs, $ctrl) {
-				if (!$ctrl.rear) { $ctrl.rear = element }
-				else {
+				if (!$ctrl.rear) {
+					$ctrl.rear = element;
+				} else {
 					console.error('[flip-container]: rear container is already defined!');
 				}
 			}
-		} 
+		};
 	});
