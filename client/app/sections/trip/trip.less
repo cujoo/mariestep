@@ -1,11 +1,14 @@
 #trip.content-section {
-	padding-top: 130px;
+	padding-top: 110px;
+	@media(min-width: @screen-sm-min) {
+		padding-top: 130px;
+	}
 }
 
 .trip-section {
 	width: 100%;
-	height: 500px;
-	padding: 50px 0;
+	height: 400px;
+	padding: 20px 0;
 	color: @light;
 	background: url(../assets/images/trip-bg.jpg) no-repeat center center scroll;
 	background-color: @dark;
@@ -13,23 +16,164 @@
 	-moz-background-size: cover;
 	background-size: cover;
 	-o-background-size: cover;
+
+	@media(min-width: @screen-sm-min) {
+		height: 500px;
+		padding: 50px 0;
+	}
 }
 
 .stages-list {
-	/*height: 500px;*/
-	max-height: 400px;
+	max-height: 300px;
 	overflow-y: scroll;
-	color: black;
 	text-align: left;
+	
+	.list-group-item {
+		background-color: fade(@light, 60%);
+		&.active {
+			background-color: fade(@primary, 60%);
+		}
+	}
+
 	a {
 		cursor: pointer;
+		color: @dark;
+	}
+	.active {
+		a {
+			cursor: defaut;
+			color: @light;
+		}
 	}
 
 	@media(min-width: @screen-sm-min) {
+		max-height: 400px;
 		font-size: 1.3em;
 	}
 }
 
-@media(min-width: @screen-sm-min) {
-	
+.stage-content {
+	border: 1px solid fade(@light, 60%);
+	border-radius: 8px;
+	box-shadow: 0px 0px 90px fade(@light, 20%);
+	background-color: @dark;
+	height: 400px;
+
+	@media(min-width: @screen-sm-min) {
+		height: 400px;
+	}
+}
+
+.stage-intro {
+	padding-top: 50px;
+	/*margin: 0 10px 0 10px;*/
+
+	@media(min-width: @screen-sm-min) {
+		padding-top: 100px;
+		/*margin: 0 20px 0 20px;*/
+	}
+}
+
+.stage-info {
+	padding-top: 0px;
+	header {
+		border: 1px solid fade(@light, 0%);
+		border-radius: 8px;
+		box-shadow: 0px 0px 90px fade(@light, 30%);
+		height: 30px;
+		text-shadow: 1px 1px 5px @dark;
+		@media(min-width: @screen-sm-min) {
+			height: 40px;
+		}
+		h1 {
+			text-align: left;
+			position: relative;
+			top: 4px;
+			left: 10px;
+			font-size: 2em;
+
+			@media(min-width: @screen-sm-min) {
+				top: 10px;
+				left: 30px;
+				font-size: 36px;
+			}
+		}
+	}
+}
+
+.stages-navigation {
+	position: absolute;
+	bottom: 0px;
+	padding-bottom: 5px;
+
+	@media(min-width: @screen-sm-min) {
+		padding-bottom: 20px;
+		font-size: 1.2;
+	}
+}
+
+/* ----------------------------------------- */
+
+.header-stage-1 {
+	background: url(../assets/images/stages/stage-1.jpg) no-repeat bottom right scroll;
+}
+.header-stage-2 {
+	background: url(../assets/images/stages/stage-2.jpg) no-repeat bottom right scroll;
+}
+.header-stage-3 {
+	background: url(../assets/images/stages/stage-3.jpg) no-repeat bottom right scroll;
+}
+.header-stage-4 {
+	background: url(../assets/images/stages/stage-1.jpg) no-repeat bottom right scroll;
+}
+.header-stage-5 {
+	background: url(../assets/images/stages/stage-2.jpg) no-repeat bottom right scroll;
+}
+.header-stage-6 {
+	background: url(../assets/images/stages/stage-3.jpg) no-repeat bottom right scroll;
+}
+.header-stage-7 {
+	background: url(../assets/images/stages/stage-1.jpg) no-repeat bottom right scroll;
+}
+.header-stage-8 {
+	background: url(../assets/images/stages/stage-2.jpg) no-repeat bottom right scroll;
+}
+.header-stage-9 {
+	background: url(../assets/images/stages/stage-3.jpg) no-repeat bottom right scroll;
+}
+.header-stage-10 {
+	background: url(../assets/images/stages/stage-1.jpg) no-repeat bottom right scroll;
+}
+.header-stage-11 {
+	background: url(../assets/images/stages/stage-2.jpg) no-repeat bottom right scroll;
+}
+.header-stage-12 {
+	background: url(../assets/images/stages/stage-3.jpg) no-repeat bottom right scroll;
+}
+.header-stage-13 {
+	background: url(../assets/images/stages/stage-1.jpg) no-repeat bottom right scroll;
+}
+.header-stage-14 {
+	background: url(../assets/images/stages/stage-2.jpg) no-repeat bottom right scroll;
+}
+.header-stage-15 {
+	background: url(../assets/images/stages/stage-3.jpg) no-repeat bottom right scroll;
+}
+.header-stage-16 {
+	background: url(../assets/images/stages/stage-1.jpg) no-repeat bottom right scroll;
+}
+.header-stage-17 {
+	background: url(../assets/images/stages/stage-2.jpg) no-repeat bottom right scroll;
+}
+.header-stage-18 {
+	background: url(../assets/images/stages/stage-3.jpg) no-repeat bottom right scroll;
+}
+.header-stage-19 {
+	background: url(../assets/images/stages/stage-1.jpg) no-repeat bottom right scroll;
+}
+.header-stage-20 {
+	background: url(../assets/images/stages/stage-2.jpg) no-repeat bottom right scroll;
+}
+.header-stage-21 {
+	background: url(../assets/images/stages/stage-3.jpg) no-repeat bottom right scroll;
 }
