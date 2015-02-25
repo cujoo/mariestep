@@ -26,7 +26,7 @@
 					</div>
 					<div ng-repeat="stage in stages" ng-show="controller.isStageSelected(stage.id)" class="row">
 						<section class="stage-info col-xs-12">
-							<header style="background-image: url(../assets/images/stages/stage-banner-{{$index + 1}}.jpg)">
+							<header class="stage-banner-{{$index + 1}}">
 								<h1>{{stage.title}}</h1>
 								<div class="stage-banner-separator"></div>
 							</header>
