@@ -5,7 +5,7 @@
 				<ul class="list-group">
 					<li class="list-group-item" ng-repeat="stage in stages" ng-class="{active:controller.isStageSelected(stage.id)}">
 						<span class="badge">14</span>
-						<a href ng-click="controller.selectStage(stage.id)"><strong>{{stage.name}}</strong></a>
+						<i class="fa fa-info-circle"></i> <a href ng-click="controller.selectStage(stage.id)"><strong>{{stage.title}}</strong></a>
 					</li>
 				</ul>
 			</div>
@@ -18,17 +18,18 @@
 						</section>
 						<section class="stages-navigation col-xs-9 col-xs-offset-2 col-sm-9 col-sm-offset-2">
 							<div class="hidden-xs col-sm-6"></div>
-							<div class="col-xs-12 col-sm-6">
-								<span class="pull-right"><i class="fa fa-info"></i></span>
+							<div class="col-xs-10 col-sm-6">
+								<span class="hidden-xs pull-right"><i class="fa fa-info"></i></span>
 								<a href ng-click="controller.selectStage(stage.id+1)">Sfoglia le tappe</a>
 							</div>							
 						</section>
 					</div>
 					<div ng-repeat="stage in stages" ng-show="controller.isStageSelected(stage.id)" class="row">
-						<!--<img src="../assets/images/stages/stage-{{$index + 1}}.jpg" alt="{{stage.name}}">-->
-						
 						<section class="stage-info col-xs-12">
-							<header class="header-stage-{{$index + 1}}"><h1>{{stage.name}}</h1></header>
+							<header style="background-image: url(../assets/images/stages/stage-banner-{{$index + 1}}.jpg)">
+								<h1>{{stage.title}}</h1>
+								<div class="stage-banner-separator"></div>
+							</header>
 							
 						</section>
 						<section class="stages-navigation col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1">
@@ -44,7 +45,7 @@
 								</div>
 							</div>
 							<div class="col-xs-6">
-								<div ng-show="stage.id<controller.stagesSize()-1">
+								<div ng-show="stage.id<controller.stagesSize()">
 									<span class="pull-right"><i class="fa fa-angle-right"></i></span>
 									<a href ng-click="controller.selectStage(stage.id+1)">Avanti</a>
 								</div>

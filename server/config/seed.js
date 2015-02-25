@@ -5,27 +5,64 @@
 
 'use strict';
 
-var Thing = require('../api/thing/thing.model');
+var Stage = require('../api/stage/stage.model');
 
-
-Thing.find({}).remove(function() {
-	Thing.create({
-		name : 'Development Tools',
-		info : 'Integration with popular tools such as Bower, Grunt, Karma, Mocha, JSHint, Node Inspector, Livereload, Protractor, Jade, Stylus, Sass, CoffeeScript, and Less.'
-	}, {
-		name : 'Server and Client integration',
-		info : 'Built with a powerful and fun stack: MongoDB, Express, AngularJS, and Node.'
-	}, {
-		name : 'Smart Build System',
-		info : 'Build system ignores `spec` files, allowing you to keep tests alongside code. Automatic injection of scripts and styles into your index.html'
-	},  {
-		name : 'Modular Structure',
-		info : 'Best practice client and server structures allow for more code reusability and maximum scalability'
-	},  {
-		name : 'Optimized Build',
-		info : 'Build process packs up your templates as a single JavaScript payload, minifies your scripts/css/images, and rewrites asset names for caching.'
+Stage.find({}).remove(function() {
+	Stage.create({
+		id 		: 1,
+		title	: 'Il volo',
+		info	: ''
 	},{
-		name : 'Deployment Ready',
-		info : 'Easily deploy your app to Heroku or Openshift with the heroku and openshift subgenerators'
+		id		: 2,
+		title	: 'Lima',
+		info	: ''
+	},{
+		id 		: 3,
+		title	: 'Paracas',
+		info 	: ''
+	},{
+		id 		: 4,
+		title	: 'Nazca',
+		info	: ''
+	},{
+		id 		: 5,
+		title	: 'Arequipa',
+		info	: ''
+	},{
+		id 		: 6,
+		title	: 'Cruz del Condor',
+		info	: ''
+	},{
+		id 		: 7,
+		title	: 'Colca del Cayon',
+		info	: ''
+	},{
+		id 		: 8,
+		title	: 'Puno',
+		info	: ''
+	},{
+		id 		: 9,
+		title	: 'Lago Titicaca',
+		info	: ''
+	},{
+		id 		: 10,
+		title	: 'La Paz',
+		info	: ''
+	},{
+		id 		: 11,
+		title	: 'Salar de Uyuni',
+		info	: ''
+	},{
+		id 		: 12,
+		title	: 'Cuzco',
+		info	: ''
+	},{
+		id 		: 13,
+		title	: 'Aguascaliente',
+		info	: ''
+	},{
+		id 		: 14,
+		title	: 'Macchu Piccu',
+		info  : ''
 	});
 });

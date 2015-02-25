@@ -5,8 +5,8 @@
 module.exports = {
 	// Server IP
 	ip: 	process.env.OPENSHIFT_NODEJS_IP ||
-		process.env.IP ||
-		undefined,
+			process.env.IP ||
+			undefined,
 
 	// Server port
 	port: 	process.env.OPENSHIFT_NODEJS_PORT ||
@@ -16,8 +16,10 @@ module.exports = {
 	// MongoDB connection options
 	mongo: {
 		uri: 	process.env.MONGOLAB_URI ||
-			process.env.MONGOHQ_URL ||
-			process.env.OPENSHIFT_MONGODB_DB_URL+process.env.OPENSHIFT_APP_NAME ||
-			'mongodb://localhost/marriageevent'
-	}
+				process.env.MONGOHQ_URL ||
+				process.env.OPENSHIFT_MONGODB_DB_URL+process.env.OPENSHIFT_APP_NAME ||
+				'mongodb://localhost/marriageevent'
+	},
+
+	seedDB: true
 };
