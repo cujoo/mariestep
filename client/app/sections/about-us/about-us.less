@@ -1,31 +1,34 @@
 @fb-color: #3B5998;
 
 #about.content-section {
-	padding-bottom: 100px;
+	padding-top: 90px;
+	padding-bottom: 800px;
+	height: 100%;
 }
 
 .about-us-section {
-	.about-us-item {
-		padding: 0px 15px 60px 15px;
-	}
-	@media(min-width: @screen-sm-min) {
-		padding: 60px 15px 0 15px;
-	}
-	.flip-container {
-		height: inherit;
-		width: 50%;
+	.about-us-info {
+		text-align: justify;
+		font-size: 16px;
 		@media(min-width: @screen-sm-min) {
-			width: 20%;
+			font-size: 20px;
 		}
 	}
+	.about-us-item {
+		padding: 30px 0px 30px 0px;
+	}
+	@media(min-width: @screen-sm-min) {
+		.about-us-item {
+			padding: 0px 15px 30px 15px;
+		}
+	}
+
 	.about-us-figure {
 		height: 160px;
 		@media(min-width: @screen-sm-min) {
-			height: 320px;
+			height: 240px;
 		}
-		max-width: 400px;
-		margin: auto;
-		position: relative;
+
 		.social-btn-container {
 			position: absolute;
 			top: 0px;
@@ -75,6 +78,49 @@
 					}
 				}
 			}
+			.flip-box {
+				display: inline-block;
+				width: 50px;
+				height: 50px;
+				margin: 15px;
+				position: relative;
+				overflow: hidden;	
+				top: -15px;
+				left: 60px;
+				@media(min-width: @screen-sm-min) {
+					top: -10px;
+					left: 90px;
+				}
+				@media(max-width: 419px) {
+					top: -10px;
+					left: 30px;				
+				}				
+				a {
+					color: @light;
+					font-size: 20px;
+					line-height: 50px;
+					display: inline-block;
+					width: 70px;
+					height: 70px;
+					position: absolute;
+					top: 0px;
+					left: -12px;
+					i.animated {
+						-webkit-transition-property: -webkit-transform;
+						-webkit-transition-duration: 1s;
+						-moz-transition-property: -moz-transform;
+						-moz-transition-duration: 1s;
+						-webkit-animation-name: pulse;
+						-moz-animation-name: pulse;
+						-webkit-animation-duration: 1.5s;
+						-moz-animation-duration: 1.5s;
+						-webkit-animation-iteration-count: infinite;
+						-moz-animation-iteration-count: infinite;
+						-webkit-animation-timing-function: linear;
+						-moz-animation-timing-function: linear;
+					}
+				}
+			}			
 			.envelope-btn {
 				background: fade(@light, 10%);
 				@media(min-width: @screen-sm-min) {
@@ -106,23 +152,33 @@
 				width: 160px;
 				height: 160px;	
 			}
+			@media(max-width: 419px) {
+				img {
+					width: 100px;
+					height: 100px;	
+				}
+			}
 			@media(min-width: @screen-sm-min) {
 				img {
-					width: 320px;
-					height: 320px;	
+					width: 240px;
+					height: 240px;	
 				}	
 			}
 		}
 		figcaption {
 			text-align: center;
+			position: relative;
+			top: 30px;
+			@media(max-width: 419px) {	
+				top: -24px;
+			}		
+			@media(min-width: @screen-sm-min) {
+				top: 110px;
+			}
 			p {
 				font-size: 1.6em;
 				padding-top: 10px;
-				i {
-					padding: 0px 20px;
-					color: @dark;
-					text-shadow: 0 0 20px @light;
-				}
+				text-shadow: 1px 1px 5px @dark;
 			}
 		}
 		&:hover {
@@ -137,40 +193,56 @@
 	#stefano-info {
 		.envelope-btn-container {
 			position: inherit;
-			top: 30px;
-			left: 90px;
+			top: 90px;
+			left: -10px;
+			@media(max-width: 419px) {
+				top: -50px;
+				left: -15px;				
+			}
 			@media(min-width: @screen-sm-min) {
-				top: 180px;
-				left: 240px;
+				top: 160px;
+				left: 0px;
 			}
 		}
 		.facebook-btn-container {
 			position: inherit;
 			top: 90px;
 			left: 90px;
+			@media(max-width: 419px) {
+				top: -50px;
+				left: 40px;				
+			}			
 			@media(min-width: @screen-sm-min) {
-				top: 240px;
-				left: 240px;
+				top: 160px;
+				left: 160px;
 			}
 		}
 	}
 	#marisol-info {
 		.envelope-btn-container {
 			position: inherit;
-			top: 30px;
-			right: 90px;			
+			top: 90px;
+			right: 90px;
+			@media(max-width: 419px) {
+				top: -50px;
+				right: 36px;
+			}
 			@media(min-width: @screen-sm-min) {
-				top: 180px;
-				right: 240px;
+				top: 0px;
+				right: 160px;
 			}
 		}		
 		.facebook-btn-container {
 			position: inherit;
 			top: 90px;
-			right: 90px;			
+			right: -10px;
+			@media(max-width: 419px) {
+				top: -50px;
+				right: -20px;
+			}
 			@media(min-width: @screen-sm-min) {
-				top: 240px;
-				right: 240px;
+				top: 0px;
+				right: 00px;
 			}
 		}
 	}

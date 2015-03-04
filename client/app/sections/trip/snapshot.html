@@ -1,0 +1,28 @@
+<div class="modal-header">
+	<h3 class="modal-title" ng-bind="stage.title"></h3>
+	<button type="button" class="close" ng-click="cancel()">&times;</button>
+</div>
+<div class="modal-body row">
+	<div class="col-xs-12" ng-init="snapshots=[[ ],
+		[{ src: '../assets/images/stages/1_01.jpg' }, { src: '../assets/images/stages/1_02.jpg' }, { src: '../assets/images/stages/1_03.jpg' }, { src: '../assets/images/stages/1_04.jpg' }],
+		[{ src: '../assets/images/stages/2_01.jpg' }, { src: '../assets/images/stages/2_02.jpg' }, { src: '../assets/images/stages/2_03.jpg' }, { src: '../assets/images/stages/2_04.jpg' }],
+		[{ src: '../assets/images/stages/3_01.jpg' }, { src: '../assets/images/stages/3_02.jpg' }, { src: '../assets/images/stages/3_03.jpg' }, { src: '../assets/images/stages/3_04.jpg' }],
+		[{ src: '../assets/images/stages/4_01.jpg' }, { src: '../assets/images/stages/4_02.jpg' }, { src: '../assets/images/stages/4_03.jpg' }, { src: '../assets/images/stages/4_04.jpg' }],
+		[{ src: '../assets/images/stages/5_01.jpg' }, { src: '../assets/images/stages/5_02.jpg' }, { src: '../assets/images/stages/5_03.jpg' }, { src: '../assets/images/stages/5_04.jpg' }],
+		[{ src: '../assets/images/stages/6_01.jpg' }, { src: '../assets/images/stages/6_02.jpg' }, { src: '../assets/images/stages/6_03.jpg' }, { src: '../assets/images/stages/6_04.jpg' }],
+		[{ src: '../assets/images/stages/7_01.jpg' }, { src: '../assets/images/stages/7_02.jpg' }, { src: '../assets/images/stages/7_03.jpg' }, { src: '../assets/images/stages/7_04.jpg' }],
+		[{ src: '../assets/images/stages/8_01.jpg' }, { src: '../assets/images/stages/8_02.jpg' }, { src: '../assets/images/stages/8_03.jpg' }, { src: '../assets/images/stages/8_04.jpg' }],
+		[{ src: '../assets/images/stages/9_01.jpg' }, { src: '../assets/images/stages/9_02.jpg' }, { src: '../assets/images/stages/9_03.jpg' }, { src: '../assets/images/stages/9_04.jpg' }],
+		[{ src: '../assets/images/stages/10_01.jpg' }, { src: '../assets/images/stages/10_02.jpg' }, { src: '../assets/images/stages/10_03.jpg' }, { src: '../assets/images/stages/10_04.jpg' }],
+		[{ src: '../assets/images/stages/11_01.jpg' }, { src: '../assets/images/stages/11_02.jpg' }, { src: '../assets/images/stages/11_03.jpg' }, { src: '../assets/images/stages/11_04.jpg' }],
+		[{ src: '../assets/images/stages/12_01.jpg' }, { src: '../assets/images/stages/12_02.jpg' }, { src: '../assets/images/stages/12_03.jpg' }, { src: '../assets/images/stages/12_04.jpg' }],
+		[{ src: '../assets/images/stages/13_01.jpg' }, { src: '../assets/images/stages/13_02.jpg' }, { src: '../assets/images/stages/13_03.jpg' }, { src: '../assets/images/stages/13_04.jpg' }],
+		[{ src: '../assets/images/stages/14_01.jpg' }, { src: '../assets/images/stages/14_02.jpg' }, { src: '../assets/images/stages/14_03.jpg' }, { src: '../assets/images/stages/14_04.jpg' }]
+	]">
+		<img class="img-rounded" ng-src="{{ snapshots[stage.id][snapshot-1].src }}" />
+	</div>
+</div>
+<!--<div class="modal-footer">
+	<button class="btn btn-primary" ng-click="ok()">OK</button>
+	<button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+</div> -->

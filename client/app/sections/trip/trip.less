@@ -3,19 +3,20 @@
 	@media(min-width: @screen-sm-min) {
 		padding-top: 130px;
 	}
-}
 
-.trip-section {
-	width: 100%;
-	height: 400px;
-	padding: 20px 0;
-	color: @light;
+	height: 100%;
 	background: url(../assets/images/trip-bg.jpg) no-repeat center center scroll;
 	background-color: @dark;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
-	-o-background-size: cover;
+	-o-background-size: cover;	
+}
+
+.trip-section {
+	height: 400px;
+	padding: 20px 0;
+	color: @light;
 
 	@media(min-width: @screen-sm-min) {
 		height: 500px;
@@ -81,7 +82,7 @@
 	}
 }
 
-.stage-info {
+.stage-block {
 	padding-top: 0px;
 	header {
 		background-repeat: no-repeat;
@@ -127,6 +128,49 @@
 			}
 		}
 	}
+
+	.stage-info {
+		padding-top: 20px;
+
+		height: 328px;
+		border-bottom: 1px solid fade(@light, 80%);
+		@media(min-width: @screen-sm-min) {
+			height: 280px;
+		}
+
+		section {
+			text-align: justify;
+			
+			height: 220px;
+			@media(min-width: @screen-sm-min) {
+				height: 240px;
+			}
+			
+			.stage-info-text {
+				height: 210px;
+				@media(min-width: @screen-sm-min) {
+					height: 230px;
+				}	
+			}
+			.stage-tickets {
+				text-align: right;
+				
+			}
+		}
+
+		.snapshots {
+			padding-top: 30px;
+			
+			div {
+				padding-bottom: 30px;
+			}
+
+			.img-thumbnail {
+				padding: 0px;
+			}
+			
+		}
+	}
 }
 
 .stages-navigation {
@@ -147,18 +191,24 @@
 	}
 }
 
+/* - modal backdrop positioning fix (http://stackoverflow.com/questions/26926798/angular-ui-modal-directive-backdrop-missing) - */
+.modal-backdrop {
+	position: fixed;
+	bottom: 0;
+}
+
 /* ----------------------------------------------------- */
-.stage-banner-1 { background-image: url(../assets/images/stages/stage-banner-1.jpg); }
-.stage-banner-2 { background-image: url(../assets/images/stages/stage-banner-2.jpg); }
-.stage-banner-3 { background-image: url(../assets/images/stages/stage-banner-3.jpg); }
-.stage-banner-4 { background-image: url(../assets/images/stages/stage-banner-4.jpg); }
-.stage-banner-5 { background-image: url(../assets/images/stages/stage-banner-5.jpg); }
-.stage-banner-6 { background-image: url(../assets/images/stages/stage-banner-6.jpg); }
-.stage-banner-7 { background-image: url(../assets/images/stages/stage-banner-7.jpg); }
-.stage-banner-8 { background-image: url(../assets/images/stages/stage-banner-8.jpg); }
-.stage-banner-9 { background-image: url(../assets/images/stages/stage-banner-9.jpg); }
-.stage-banner-10 { background-image: url(../assets/images/stages/stage-banner-10.jpg); }
-.stage-banner-11 { background-image: url(../assets/images/stages/stage-banner-11.jpg); }
-.stage-banner-12 { background-image: url(../assets/images/stages/stage-banner-12.jpg); }
-.stage-banner-13 { background-image: url(../assets/images/stages/stage-banner-13.jpg); }
-.stage-banner-14 { background-image: url(../assets/images/stages/stage-banner-14.jpg); }
+.stage-banner-1 { background-image: url(../assets/images/banners/stage-banner-1.jpg); }
+.stage-banner-2 { background-image: url(../assets/images/banners/stage-banner-2.jpg); }
+.stage-banner-3 { background-image: url(../assets/images/banners/stage-banner-3.jpg); }
+.stage-banner-4 { background-image: url(../assets/images/banners/stage-banner-4.jpg); }
+.stage-banner-5 { background-image: url(../assets/images/banners/stage-banner-5.jpg); }
+.stage-banner-6 { background-image: url(../assets/images/banners/stage-banner-6.jpg); }
+.stage-banner-7 { background-image: url(../assets/images/banners/stage-banner-7.jpg); }
+.stage-banner-8 { background-image: url(../assets/images/banners/stage-banner-8.jpg); }
+.stage-banner-9 { background-image: url(../assets/images/banners/stage-banner-9.jpg); }
+.stage-banner-10 { background-image: url(../assets/images/banners/stage-banner-10.jpg); }
+.stage-banner-11 { background-image: url(../assets/images/banners/stage-banner-11.jpg); }
+.stage-banner-12 { background-image: url(../assets/images/banners/stage-banner-12.jpg); }
+.stage-banner-13 { background-image: url(../assets/images/banners/stage-banner-13.jpg); }
+.stage-banner-14 { background-image: url(../assets/images/banners/stage-banner-14.jpg); }

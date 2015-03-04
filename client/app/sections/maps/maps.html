@@ -1,0 +1,32 @@
+<div ng-controller="MapsCtrl as controller">
+	<div class="g-map">
+		<div class="row">
+			<div class="col-xs-12 col-sm-6 map-title">
+				<span>Basilica dei SS Nereo e Achilleo</span>
+			</div>
+			<div class="col-xs-12 col-sm-6 map-link">
+				<a href="https://www.google.com/maps/dir//Santi+Nereo+e+Achilleo/@41.8801229,12.4604642,13z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x132f61cf7a252197:0x41c95713af3c7c06!2m2!1d12.494797!2d41.880128?hl=it" target="new">
+					<i class="fa fa-question-circle animated"></i> Come raggiungerla
+				</a>
+			</div>
+		</div>
+		<ui-gmap-google-map center='c.map.center' zoom='c.map.zoom' options='c.map.options'>
+			<ui-gmap-marker coords='c.marker.coords' idkey='c.marker.id' icon='c.marker.icon'></ui-gmap-marker>
+		</ui-gmap-google-map>
+	</div>
+	<div class="g-map">
+		<div class="row">
+			<div class="col-xs-12 col-sm-6 map-title">
+				<span>Il ristorante</span>
+			</div>
+			<div class="col-xs-12 col-sm-6 map-link">
+				<a href="https://www.google.it/maps/dir//Via+Isernia,+4,+00182+Roma/@41.8853313,12.5143126,17z/data=!4m13!1m4!3m3!1s0x132f619336bc3971:0x45aa00b8f8207bf4!2sVia+Isernia,+4,+00182+Roma!3b1!4m7!1m0!1m5!1m1!1s0x132f619336bc3971:0x45aa00b8f8207bf4!2m2!1d12.5143126!2d41.8853313" target="new">
+					<i class="fa fa-question-circle animated"></i> Come raggiungerla
+				</a>
+			</div>
+		</div>
+		<ui-gmap-google-map center='r.map.center' zoom='r.map.zoom' options='r.map.options'>
+			<ui-gmap-marker coords='r.marker.coords' idkey='r.marker.id' icon='r.marker.icon'></ui-gmap-marker>
+		</ui-gmap-google-map>
+	</div>
+</div>

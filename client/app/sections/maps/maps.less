@@ -1,0 +1,42 @@
+#places.content-section {
+	padding-top: 100px;
+}
+
+.angular-google-map-container { 
+	height: 400px;
+	border-top: 1px solid fade(@light, 60%);
+	border-bottom: 1px solid fade(@light, 60%);
+	box-shadow: 0px 0px 90px fade(@light, 80%);
+}
+
+.g-map {
+	padding: 50px 0px;
+
+	.map-title {
+		font-size: 24px;
+		text-align: left;
+		padding-left: 30px;
+	}
+
+	.map-link {
+		text-align: right;
+		padding-right: 30px;
+		i {
+			color: @primary;
+			&.animated {
+				-webkit-transition-property: -webkit-transform;
+				-webkit-transition-duration: 1s;
+				-moz-transition-property: -moz-transform;
+				-moz-transition-duration: 1s;
+				-webkit-animation-name: pulse;
+				-moz-animation-name: pulse;
+				-webkit-animation-duration: 1.5s;
+				-moz-animation-duration: 1.5s;
+				-webkit-animation-iteration-count: infinite;
+				-moz-animation-iteration-count: infinite;
+				-webkit-animation-timing-function: linear;
+				-moz-animation-timing-function: linear;
+			}
+		}
+	}
+}

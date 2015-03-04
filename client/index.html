@@ -14,7 +14,6 @@
 		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 		<!-- build:css(client) app/vendor.css -->
 			<!-- bower:css -->
-			<link rel="stylesheet" href="bower_components/angular-carousel/dist/angular-carousel.css" />
 			<!-- endbower -->
 		<!-- endbuild -->
 		<!-- build:css({.tmp,client}) app/app.css -->
@@ -59,23 +58,26 @@
 			<script src="bower_components/lodash/dist/lodash.compat.js"></script>
 			<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 			<script src="bower_components/jquery.easing/js/jquery.easing.js"></script>
-			<script src="bower_components/angular-touch/angular-touch.js"></script>
-			<script src="bower_components/angular-carousel/dist/angular-carousel.js"></script>
+			<script src="bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
 			<!-- endbower -->
 		<!-- endbuild -->
 
-				<!-- build:js({.tmp,client}) app/app.js -->
-				<script src="app/app.js"></script>
-					<!-- injector:js -->
-					<script src="app/main/main.controller.js"></script>
-					<script src="app/main/main.js"></script>
-					<script src="app/sections/about-us/about-us.controller.js"></script>
-					<script src="app/sections/trip/trip.controller.js"></script>
-					<script src="components/modal/modal.service.js"></script>
-					<script src="components/navbar/navbar.controller.js"></script>
-					<script src="components/navbar/navbar.directive.js"></script>
-					<script src="components/ui/flip-container.directive.js"></script>
-					<!-- endinjector -->
-				<!-- endbuild -->
+		<!-- build:js({.tmp,client}) app/app.js -->
+		<script src="app/app.js"></script>
+			<!-- injector:js -->
+			<script src="app/main/main.controller.js"></script>
+			<script src="app/main/main.js"></script>
+			<script src="app/sections/about-us/about-us.controller.js"></script>
+			<script src="app/sections/maps/maps.controller.js"></script>
+			<script src="app/sections/navigation/navbar.controller.js"></script>
+			<script src="app/sections/navigation/navbar.directive.js"></script>
+			<script src="app/sections/trip/snapshot.controller.js"></script>
+			<script src="app/sections/trip/trip.controller.js"></script>
+			<script src="app/services/gifts/gifts.service.js"></script>
+			<script src="components/ui/flip-container.directive.js"></script>
+			<!-- endinjector -->
+		<!-- endbuild -->
+
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>		
 </body>
 </html>
