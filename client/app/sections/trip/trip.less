@@ -73,12 +73,24 @@
 }
 
 .stage-intro {
-	padding-top: 50px;
-	/*margin: 0 10px 0 10px;*/
-
+	padding-top: 20px;
+	.title {
+		font-size: 22px;
+		margin-bottom: 15px;
+	}
+	p {
+		text-align: justify;
+		font-size: 13px;
+	}
 	@media(min-width: @screen-sm-min) {
-		padding-top: 100px;
-		/*margin: 0 20px 0 20px;*/
+		padding-top: 30px;
+		.title {
+			font-size: 30px;
+			margin-bottom: 35px;
+		}
+		p {
+			font-size: 18px;
+		}
 	}
 }
 
@@ -141,16 +153,17 @@
 		section {
 			text-align: justify;
 			
-			height: 220px;
+			/*height: 220px;
 			@media(min-width: @screen-sm-min) {
 				height: 240px;
-			}
+			}*/
 			
 			.stage-info-text {
-				height: 210px;
+				/*height: 210px;
 				@media(min-width: @screen-sm-min) {
 					height: 230px;
-				}	
+				}*/	
+			
 			}
 			.stage-tickets {
 				text-align: right;
@@ -175,7 +188,7 @@
 
 .stages-navigation {
 	position: absolute;
-	bottom: 0px;
+	bottom: 15px;
 	padding-bottom: 5px;
 	font-size: 1.1em;
 	i {
@@ -186,6 +199,7 @@
 	}
 
 	@media(min-width: @screen-sm-min) {
+		bottom: 0px;
 		padding-bottom: 20px;
 		font-size: 1.2em;
 	}

@@ -14,7 +14,7 @@ var Stage = require('./stage.model');
 
 // Get list of stages
 exports.index = function(req, res) {
-	Stage.find(function(err, stages) {
+	Stage.find().sort('id').exec(function(err, stages) {
 		if (err) { return handleError(res, err); }
 		return res.json(200, stages);
 	});

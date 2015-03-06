@@ -15,9 +15,11 @@
 				<!-- Welcome message container -->
 				<div class="row" ng-show="controller.isStageSelected(0)">
 					<section class="stage-intro col-xs-10 col-xs-offset-1">
-						<h2>Esplora le tappe del nostro viaggio!</h2>
-						<p>Guarda i luoghi che visiteremo e scegli le tappe da regalare. Ogni quota vale 25€ e bla bla bla</p>
-						<!--<a href ng-click="controller.addGift()">Add</a> <a href ng-click="controller.removeGift()">Remove</a>-->
+						<h2 class="title">Il nostro viaggio comincia da qui...</h2>
+						<span>
+						<p>Dal 16 Maggio saremo marito e moglie. Abbiamo scelto come viaggio di nozze di affrontare un lungo viaggio tra Perù e Bolivia, respirando a più di 3.500 metri di quota tra il suono del flauto di Pan.</p>
+						<p>Abbiamo costruito l’itinerario tappa per tappa scegliendo ogni luogo, escursione e dettaglio in modo da renderlo unico.</p>
+						</span>
 					</section>
 					<section class="stages-navigation col-xs-9 col-xs-offset-2 col-sm-9 col-sm-offset-2">
 						<div class="hidden-xs col-sm-6"></div>
@@ -41,7 +43,7 @@
 							<section class="col-xs-12 col-sm-8">
 								<div class="stage-info-text" ng-bind-html="stage.info"></div>
 								<div class="stage-tickets">
-									<a href ng-click="controller.addGift()"><i class="fa fa-ticket"></i> Add</a>
+									<!--<a href ng-click="controller.addGift()"><i class="fa fa-ticket"></i> Add</a>-->
 								</div>
 							</section>
 							<!-- Snapshots -->
