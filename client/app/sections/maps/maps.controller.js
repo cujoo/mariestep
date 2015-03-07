@@ -15,7 +15,7 @@ angular.module('marriageEventApp')
 		// The 'then' callback function provides the google.maps object.
 		uiGmapGoogleMapApi.then(function() {
 			var coordsC = { latitude: 41.88013, longitude: 12.49479 },
-				coordsR = { latitude: 41.88533, longitude: 12.51431 },
+				coordsR = { latitude: 41.762776, longitude: 12.671462 },
 				mapOptions = {
 					// Disables the default Google Maps UI components
 					disableDefaultUI: false,

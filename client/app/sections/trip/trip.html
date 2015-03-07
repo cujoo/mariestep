@@ -4,7 +4,7 @@
 		<div class="hidden-xs hidden-sm col-md-4 stages-list" scrollable>
 			<ul class="list-group">
 				<li class="list-group-item" ng-repeat="stage in stages" ng-class="{active:controller.isStageSelected(stage.id)}">
-					<span class="badge">14</span>
+					<!--<span class="badge">14</span>-->
 					<i class="fa fa-map-marker"></i> <a href ng-click="controller.selectStage(stage.id)"><strong>{{stage.title}}</strong></a>
 				</li>
 			</ul>
@@ -15,17 +15,16 @@
 				<!-- Welcome message container -->
 				<div class="row" ng-show="controller.isStageSelected(0)">
 					<section class="stage-intro col-xs-10 col-xs-offset-1">
-						<h2 class="title">Il nostro viaggio comincia da qui...</h2>
+						<h2 class="title">Esplora le tappe del nostro viaggio...</h2>
 						<span>
-						<p>Dal 16 Maggio saremo marito e moglie. Abbiamo scelto come viaggio di nozze di affrontare un lungo viaggio tra Perù e Bolivia, respirando a più di 3.500 metri di quota tra il suono del flauto di Pan.</p>
-						<p>Abbiamo costruito l’itinerario tappa per tappa scegliendo ogni luogo, escursione e dettaglio in modo da renderlo unico.</p>
+							<p>Scopri le mete del nostro itinerario per le quali a breve, se vorrai, sarà possibile dare un tuo contributo alla realizzazione del viaggio del nostro matrimonio!</p>
 						</span>
 					</section>
 					<section class="stages-navigation col-xs-9 col-xs-offset-2 col-sm-9 col-sm-offset-2">
 						<div class="hidden-xs col-sm-6"></div>
 						<div class="col-xs-10 col-sm-6">
 							<span class="hidden-xs pull-right"><i class="fa fa-info"></i></span>
-							<a href ng-click="controller.selectStage(stage.id+1)">Sfoglia le tappe</a>
+							<a href ng-click="controller.selectStage(stage.id+1)">Inizia l'esplorazione</a>
 						</div>							
 					</section>
 				</div>
@@ -41,14 +40,16 @@
 						<article class="stage-info col-md-12 col-md-offset-0">
 							<!-- Main content -->
 							<section class="col-xs-12 col-sm-8">
-								<div class="stage-info-text" ng-bind-html="stage.info"></div>
-								<div class="stage-tickets">
+								<div class="row fluid-container stage-info-text">
+									<span ng-bind-html="stage.info"></span>
+								</div>
+								<div class="row fluid-containerstage-tickets">
 									<!--<a href ng-click="controller.addGift()"><i class="fa fa-ticket"></i> Add</a>-->
 								</div>
 							</section>
 							<!-- Snapshots -->
 							<div class="col-xs-12 col-sm-4">
-								<div class="row no-gutter snapshots" ng-init="snapshots=[[ ],
+								<div class="row no-gutter fluid-container snapshots" ng-init="snapshots=[[ ],
 									[{ src: '../assets/images/thumbs/1_01.jpg' }, { src: '../assets/images/thumbs/1_02.jpg' }, { src: '../assets/images/thumbs/1_03.jpg' }, { src: '../assets/images/thumbs/1_04.jpg' }],
 									[{ src: '../assets/images/thumbs/2_01.jpg' }, { src: '../assets/images/thumbs/2_02.jpg' }, { src: '../assets/images/thumbs/2_03.jpg' }, { src: '../assets/images/thumbs/2_04.jpg' }],
 									[{ src: '../assets/images/thumbs/3_01.jpg' }, { src: '../assets/images/thumbs/3_02.jpg' }, { src: '../assets/images/thumbs/3_03.jpg' }, { src: '../assets/images/thumbs/3_04.jpg' }],
@@ -70,17 +71,17 @@
 										</a>
 									</div>
 									<div class="col-xs-3 col-sm-6">
-										<a href="#" ng-click="snapshot(stage.id, 2)">
+										<a href="#" ng-click="snapshot(stage.id, 2)" ng-hide="stage.id===1">
 											<img class="img-thumbnail" ng-src="{{ snapshots[stage.id][1].src }}" alt="{{stage.title}}" />
 										</a>
 									</div>
 									<div class="col-xs-3 col-sm-6">
-										<a href="#" ng-click="snapshot(stage.id, 3)">
+										<a href="#" ng-click="snapshot(stage.id, 3)" ng-hide="stage.id===1">
 											<img class="img-thumbnail" ng-src="{{ snapshots[stage.id][2].src }}" alt="{{stage.title}}" />
 										</a>
 									</div>
 									<div class="col-xs-3 col-sm-6">
-										<a href="#" ng-click="snapshot(stage.id, 4)">
+										<a href="#" ng-click="snapshot(stage.id, 4)" ng-hide="stage.id===1">
 											<img class="img-thumbnail" ng-src="{{ snapshots[stage.id][3].src }}" alt="{{stage.title}}" />
 										</a>
 									</div>

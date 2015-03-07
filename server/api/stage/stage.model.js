@@ -9,7 +9,11 @@ var StageSchema = new Schema({
 	info: String,
 	t_free: Number,
 	t_pending: Number,
-	t_booked: Number
+	t_booked: Number,
+	ss_1: String,
+	ss_2: String,
+	ss_3: String,
+	ss_4: String
 });
 
 module.exports = mongoose.model('Stage', StageSchema);
