@@ -6,7 +6,8 @@ angular.module('marriageEventApp', [
 	'ngSanitize',
 	'ui.router',
 	'ui.bootstrap',
-	'uiGmapgoogle-maps'
+	'uiGmapgoogle-maps',
+	'timer'
 ])
 	.constant('CONSTANTS', {
 		'GMAP_KEY': 'AIzaSyBQqtJUvHElg4-BTQ-vSNw9sNMds5ZmXck'

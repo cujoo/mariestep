@@ -9,7 +9,36 @@
 				<div class="col-md-8 col-md-offset-2">
 					<h1 class="brand-heading">Il nostro matrimonio</h1>
 					<p class="intro-text">16 maggio 2015</p>
-					<!-- <timer end-time="1451628000000">{{days}} days, {{hours}} hours, {{minutes}} minutes, {{seconds}} seconds.</timer> -->
+					<!--<timer end-time="1431788400000">{{days}} days, {{hours}} hours, {{minutes}} minutes, {{seconds}} seconds.</timer>-->
+					<div class="row countdown">
+						<timer end-time="1431788400000">
+							<div class="col-xs-offset-2 col-xs-4 col-md-offset-2 col-md-2">
+								<div class="numb">
+									<div class="col-xs-4 value">{{days}}</div>
+									<div class="col-xs-8 ref">giorni</div>
+								</div>
+							</div>
+							<div class="col-xs-4 col-md-2">
+								<div class="numb">
+									<div class="col-xs-4 value">{{hours}}</div>
+									<div class="col-xs-8 ref">ore</div>
+								</div>
+							</div>
+							<div class="col-xs-offset-2 col-xs-4 col-md-offset-0 col-md-2">
+								<div class="numb">
+									<div class="col-xs-4 value">{{minutes}}</div>
+									<div class="col-xs-8 ref">minuti</div>
+								</div>
+							</div>
+							<div class="col-xs-4 col-md-2">
+								<div class="numb">
+									<div class="col-xs-4 value">{{seconds}}</div>
+									<div class="col-xs-8 ref">secondi</div>
+								</div>
+							</div>
+						</timer>
+					</div>
+
 					<a scroll-anchor href="#about" class="btn btn-circle">
 						<i class="fa fa-angle-double-down animated"></i>
 					</a>

@@ -25,6 +25,36 @@
 	}
 }
 
+.countdown {
+	.numb {
+		padding: 10px 0px;
+		color: @light;
+		height: 45px;
+		text-shadow: 1px 1px 5px @dark;
+
+		-webkit-transition: background .3s ease-in-out;
+		-moz-transition: background .3s ease-in-out;
+		transition: background .3s ease-in-out;
+		background-color: fade(@light, 20%);
+		&:hover {
+			background-color: fade(@light, 40%);
+		}
+		.value {
+			position: relative;
+			top: -10px;
+			left: -5px;
+			font-size: 35px;
+			font-weight: 100;
+		}
+		.ref {
+			position: relative;
+			top: -3px;
+			left: 5px;
+			font-size: 13px
+		}
+	}
+}
+
 @media(min-width: @screen-sm-min) {
 	.intro {
 		height: 100%;
