@@ -6,6 +6,7 @@
 'use strict';
 
 var Stage = require('../api/stage/stage.model');
+var Reservation = require('../api/stage/reservation.model');
 
 Stage.find({}).remove(function() {
 	Stage.create({
@@ -166,3 +167,5 @@ Stage.find({}).remove(function() {
 		ss_4		: 'Il Fiume Rio Urubamba'
 	});
 });
+
+Reservation.find({}).remove(function() { });
