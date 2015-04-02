@@ -14,7 +14,7 @@
 }
 
 .trip-section {
-	height: 400px;
+	height: 500px;
 	padding: 20px 0;
 	color: @light;
 
@@ -22,6 +22,10 @@
 		height: 500px;
 		padding: 50px 0;
 	}
+}
+
+.full-height {
+	height: 100%;
 }
 
 .stages-list {
@@ -66,14 +70,18 @@
 	box-shadow: 0px 0px 90px fade(@light, 20%);
 	background-color: @dark;
 	
-	/*height: 400px;*/
+	height: 100%;
 	@media(min-width: @screen-sm-min) {
-		height: 400px;
+		height: 100%;
 	}
 }
 
 .stage-intro {
 	padding-top: 20px;
+	@media(min-width: @screen-sm-min) {
+		padding-top: 0px;
+	}
+
 	.title {
 		font-size: 22px;
 		margin-bottom: 15px;
@@ -81,7 +89,12 @@
 	p {
 		text-align: justify;
 		font-size: 13px;
+		margin: 0px 0px 15px;
 	}
+	.btn-gift-container {
+		padding-bottom: 15px;
+	}
+
 	@media(min-width: @screen-sm-min) {
 		padding-top: 30px;
 		.title {
@@ -95,12 +108,13 @@
 }
 
 .stage-block {
-	padding-top: 0px;
+	padding: 0px;
 	header {
 		background-repeat: no-repeat;
 		background-position-x: 83%;
 		background-position-y: center;
 		background-attachment: scroll;
+		background-size: 100% 60px;
 
 		border: 1px solid fade(@light, 0%);
 		border-radius: 8px;
@@ -139,12 +153,67 @@
 				top: -35px;
 			}
 		}
+
+		.btn-container {
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			z-index: 3;
+
+			.btn {
+				font-family: "Indie Flower","Helvetica Neue",Helvetica,Arial,sans-serif;
+				text-transform: none;
+				font-size: 1.3em;
+			}
+			.btn-default {
+				color: @light;
+				border-color: transparent;
+				text-shadow: 1px 1px 5px @dark;
+
+				&:hover {
+					color: @primary;
+					border-color: transparent;
+					background-color: transparent;
+				}
+
+				-webkit-transition: background .3s ease-in-out;
+				-moz-transition: background .3s ease-in-out;
+				transition: background .3s ease-in-out;
+
+				span.glyphicon.animated {
+					-webkit-transition-property: -webkit-transform;
+					-webkit-transition-duration: 1s;
+					-moz-transition-property: -moz-transform;
+					-moz-transition-duration: 1s;
+					-webkit-animation-name: pulse;
+					-moz-animation-name: pulse;
+					-webkit-animation-duration: 1.5s;
+					-moz-animation-duration: 1.5s;
+					-webkit-animation-iteration-count: infinite;
+					-moz-animation-iteration-count: infinite;
+					-webkit-animation-timing-function: linear;
+					-moz-animation-timing-function: linear;
+				}
+				.pull-right {
+					padding-left: 0px;
+					@media(min-width: @screen-sm-min) {
+						padding-left: 10px;
+					}
+				}
+				.pull-left {
+					padding-right: 0px;
+					@media(min-width: @screen-sm-min) {
+						padding-right: 10px;
+					}
+				}
+			}			
+		}
 	}
 
 	.stage-info {
 		padding-top: 20px;
 
-		height: 328px;
+		height: 100%;
 		/*border-bottom: 1px solid fade(@light, 80%);*/
 		@media(min-width: @screen-sm-min) {
 			height: 280px;
@@ -154,12 +223,28 @@
 			.stage-info-text {
 				text-align: justify;
 				padding: 0px 20px;
+
+				p {
+					font-size: 14px;
+					margin: 0px 0px 10px;
+					@media(min-width: @screen-sm-min) {
+						font-size: 16px;
+						margin: 0px 0px 25px;
+					}
+				}
 			
 			}
 			.stage-tickets {
 				text-align: right;
-				
 			}
+		}
+
+		.main-content {
+			padding-left: 0px;
+			padding-right: 0px;
+		}
+		.ss-content {
+			padding-top: 20px;
 		}
 
 		.snapshots {
@@ -175,22 +260,120 @@
 	}
 }
 
+.stages-gifts {
+	position: absolute;
+	bottom: 110px;
+
+	@media(min-width: @screen-sm-min) {
+		bottom: 120px;
+	}
+
+	.booked-gifts {
+		text-align: left;
+		padding-left: 6px;
+		font-size: 16px;
+
+		.persons {
+			color: @primary;
+			font-weight: bold;
+		}
+	}
+
+	.toolbar {
+		text-align: left;
+		padding-left: 6px;
+	}
+}
+
 .stages-navigation {
 	position: absolute;
 	bottom: 0px;
-	padding-bottom: 5px;
+	padding-bottom: 15px;
 	font-size: 1.1em;
-	i {
-		font-size: 0.7em;
-		@media(min-width: @screen-sm-min) {
-			font-size: 1em;
+
+	.btn {
+		font-family: "Indie Flower","Helvetica Neue",Helvetica,Arial,sans-serif;
+		text-transform: none;
+	}
+	.btn-default {
+		color: @light;
+		border-color: transparent;
+
+		-webkit-transition: background .3s ease-in-out;
+		-moz-transition: background .3s ease-in-out;
+		transition: background .3s ease-in-out;
+
+		span.glyphicon.animated {
+			-webkit-transition-property: -webkit-transform;
+			-webkit-transition-duration: 1s;
+			-moz-transition-property: -moz-transform;
+			-moz-transition-duration: 1s;
+			-webkit-animation-name: pulse;
+			-moz-animation-name: pulse;
+			-webkit-animation-duration: 1.5s;
+			-moz-animation-duration: 1.5s;
+			-webkit-animation-iteration-count: infinite;
+			-moz-animation-iteration-count: infinite;
+			-webkit-animation-timing-function: linear;
+			-moz-animation-timing-function: linear;
+		}
+		.pull-right {
+			padding-left: 0px;
+			@media(min-width: @screen-sm-min) {
+				padding-left: 10px;
+			}
+		}
+		.pull-left {
+			padding-right: 0px;
+			@media(min-width: @screen-sm-min) {
+				padding-right: 10px;
+			}
 		}
 	}
 
 	@media(min-width: @screen-sm-min) {
 		bottom: 0px;
-		padding-bottom: 20px;
+		padding-bottom: 10px;
 		font-size: 1.2em;
+	}
+}
+
+.btn-gift-container {
+	.btn-gift {
+		padding-left: 0px;
+		padding-right: 0px;
+		@media(min-width: @screen-sm-min) {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+
+		color: @primary;
+	}
+
+	.btn {
+		padding: 6px 0px;
+		font-size: 0.8em;
+		@media(min-width: @screen-sm-min) {
+			padding: 6px 12px;
+			font-size: 1em;
+		}
+	}
+	.btn-default {
+		color: @light;
+		border-color: transparent;
+		text-shadow: 1px 1px 5px @dark;
+
+		-webkit-transition: background .3s ease-in-out;
+		-moz-transition: background .3s ease-in-out;
+		transition: background .3s ease-in-out;
+
+		&:hover,
+		&:focus,
+		&:active {
+			color: @primary;
+			border-color: transparent;
+			background-color: transparent;
+		}
 	}
 }
 
