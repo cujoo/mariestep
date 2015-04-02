@@ -6,7 +6,7 @@
 'use strict';
 
 var Stage = require('../api/stage/stage.model');
-var Reservation = require('../api/stage/reservation.model');
+var Reservation = require('../api/reservation/reservation.model');
 
 Stage.find({}).remove(function() {
 	Stage.create({
