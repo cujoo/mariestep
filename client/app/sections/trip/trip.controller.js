@@ -17,6 +17,15 @@ angular.module('marriageEventApp')
 			$scope.stages = stages;
 		});
 
+		$scope.$watch( function() { return gifts.hasBeenBooked(); }, function(value) {
+			if (value === true) {
+				$http.get('/api/stages').success(function(stages) {
+					$scope.stages = stages;
+					gifts.setBooked(false);
+				});
+			}
+		});
+
 		this.active = 0;
 		this.selectStage = function(idx) {
 			this.active = idx;
@@ -34,12 +43,16 @@ angular.module('marriageEventApp')
 		// --- stages manipulation ---
 
 		// --- gifts manipulation ---
-		this.addGift = function() {
-			gifts.addItem();
+		this.addToGifts = function(stageId) {
+			for (var i=0; i<$scope.stages.length; i++) {
+				if ($scope.stages[i].id === stageId) {
+					gifts.addTicket(stageId, $scope.stages[i]);
+				}
+			}
 		};
 
-		this.removeGift = function() {
-			gifts.removeItem();
+		this.removeFromGifts = function(stageId) {
+			gifts.removeTicket(stageId);
 		};
 		// gifts manipulation
 

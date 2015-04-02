@@ -10,6 +10,7 @@ var StageSchema = new Schema({
 	t_free: Number,
 	t_pending: Number,
 	t_booked: Number,
+	t_persons: [ String ],
 	ss_1: String,
 	ss_2: String,
 	ss_3: String,

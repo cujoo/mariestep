@@ -1,0 +1,229 @@
+.modal-header {
+	color: @dark;
+
+	.cart-title {
+		padding-left: 10px;
+		padding-right: 10px;
+		font-size: 36px;
+		font-weight: 700;
+
+		i {
+			color: @primary;
+		}
+	}
+
+	button {
+		font-size: 2.5em;
+		position: absolute;
+		top: 7px;
+		right: 20px;
+	}
+}
+
+.modal-body {
+	color: @dark;
+
+	.tickets-cnt {
+		margin: 10px 0px;
+		padding-top: 15px;
+		border-top: 1px solid #e5e5e5;
+		border-bottom: 1px solid #e5e5e5;
+	}
+
+	.no-tickets-disclaimer {
+		text-align: justify;
+		font-size: 20px;
+	}
+
+	.tickets-disclaimer {
+		text-align: justify;
+		font-size: 18px;
+	}
+
+	.no-border {
+		border: none;
+	}
+
+	.gift-item {
+		padding-bottom: 15px;
+
+		.stage-title {
+			font-size: 18px;
+			padding-top: 10px;
+			@media(min-width: @screen-sm-min) {
+				font-size: 24px;
+				padding-top: 10px;
+			}
+			margin: 0px;
+			
+		}
+
+		.stage-tickets {
+			font-size: 20px;
+			padding-top: 10px;
+			@media(min-width: @screen-sm-min) {
+				font-size: 28px;
+				padding-top: 10px;
+			}			
+			margin: 0px;
+		}
+
+		.stage-tickets-price {
+			padding-top: 0px;
+			padding-right: 20px;
+			@media(min-width: @screen-sm-min) {
+				padding-top: 10px;
+				padding-right: 0px;
+			}
+			font-size: 18px;
+		}
+
+		.btn-gift-container {
+			padding-top: 5px;
+			.btn {
+				font-family: "Indie Flower","Helvetica Neue",Helvetica,Arial,sans-serif;
+				text-transform: none;
+				
+				padding: 6px 0px;
+				font-size: 0.7em;
+				@media(min-width: @screen-sm-min) {
+					padding: 6px 12px;
+					font-size: 1em;
+				}
+			}
+			.btn-default {
+				color: @light;
+				border-color: transparent;
+				text-shadow: 1px 1px 5px @dark;
+
+				&:hover, &:focus, &:active {
+					color: @primary;
+					border-color: transparent;
+					background-color: transparent;
+				}
+
+				-webkit-transition: background .3s ease-in-out;
+				-moz-transition: background .3s ease-in-out;
+				transition: background .3s ease-in-out;
+
+				span.glyphicon.animated {
+					-webkit-transition-property: -webkit-transform;
+					-webkit-transition-duration: 1s;
+					-moz-transition-property: -moz-transform;
+					-moz-transition-duration: 1s;
+					-webkit-animation-name: pulse;
+					-moz-animation-name: pulse;
+					-webkit-animation-duration: 1.5s;
+					-moz-animation-duration: 1.5s;
+					-webkit-animation-iteration-count: infinite;
+					-moz-animation-iteration-count: infinite;
+					-webkit-animation-timing-function: linear;
+					-moz-animation-timing-function: linear;
+				}
+				.pull-right {
+					padding-left: 0px;
+					@media(min-width: @screen-sm-min) {
+						padding-left: 10px;
+					}
+				}
+				.pull-left {
+					padding-right: 0px;
+					@media(min-width: @screen-sm-min) {
+						padding-right: 10px;
+					}
+				}
+			}			
+		}
+	}
+
+	img.tickets-ss {
+		height: 50px;
+		width: 100%;
+		border: 1px solid fade(@dark, 60%);
+		border-radius: 8px;
+		box-shadow: 0px 0px 90px fade(@dark, 20%);
+	}
+
+	.gift-form {
+		padding-top: 15px;
+		
+		label {
+			font-size: 18px;
+		}
+
+		input {
+			font-weight: bold;
+		}
+
+		input.ng-invalid.ng-touched {
+			border-color: #FA787E;
+		}
+
+		input.ng-valid.ng-touched {
+			border-color: #78FA89;
+		}
+
+		.gifts-buttons {
+			text-align: center;
+
+			font-size: 22px;
+			@media(min-width: @screen-sm-min) {
+				font-size: 16px;
+			}
+			padding: 10px;
+
+			.btn {
+				font-family: "Indie Flower","Helvetica Neue",Helvetica,Arial,sans-serif;
+				text-transform: none;
+				
+				padding: 6px 0px;
+				font-size: 0.7em;
+				@media(min-width: @screen-sm-min) {
+					padding: 6px 12px;
+					font-size: 1em;
+				}
+			}
+			.btn-default {
+				color: @dark;
+				border-color: transparent;
+
+				&:hover, &:focus, &:active {
+					color: @light;
+					border-color: transparent;
+					background-color: @primary;
+				}
+
+				-webkit-transition: background .3s ease-in-out;
+				-moz-transition: background .3s ease-in-out;
+				transition: background .3s ease-in-out;
+
+				span.glyphicon.animated {
+					-webkit-transition-property: -webkit-transform;
+					-webkit-transition-duration: 1s;
+					-moz-transition-property: -moz-transform;
+					-moz-transition-duration: 1s;
+					-webkit-animation-name: pulse;
+					-moz-animation-name: pulse;
+					-webkit-animation-duration: 1.5s;
+					-moz-animation-duration: 1.5s;
+					-webkit-animation-iteration-count: infinite;
+					-moz-animation-iteration-count: infinite;
+					-webkit-animation-timing-function: linear;
+					-moz-animation-timing-function: linear;
+				}
+				.pull-right {
+					padding-left: 0px;
+					@media(min-width: @screen-sm-min) {
+						padding-left: 10px;
+					}
+				}
+				.pull-left {
+					padding-right: 0px;
+					@media(min-width: @screen-sm-min) {
+						padding-right: 10px;
+					}
+				}
+			}			
+		}		
+	}
+}

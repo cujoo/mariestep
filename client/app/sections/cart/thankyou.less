@@ -1,0 +1,35 @@
+.modal-header {
+	color: @dark;
+
+	.ty-title {
+		padding-left: 10px;
+		padding-right: 10px;
+		font-size: 36px;
+		font-weight: 700;
+
+		i {
+			color: @primary;
+		}
+	}
+
+	button {
+		font-size: 2.5em;
+		position: absolute;
+		top: 7px;
+		right: 20px;
+	}
+}
+
+.modal-body {
+	color: @dark;
+
+	.ty-message {
+		text-align: justify;
+
+		font-size: 16px;
+		@media(min-width: @screen-sm-min) {
+			font-size: 20px;
+		}
+
+	}
+}

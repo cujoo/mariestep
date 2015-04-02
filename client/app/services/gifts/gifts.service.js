@@ -3,18 +3,53 @@
 angular.module('marriageEventApp')
  	.service('gifts', function () {
 	
-		var items = [ ];
+		var tickets = { }, total = 0, booked = false;
 
-		this.getItemsCount = function() {
-			return items.length;
+		this.setBooked = function(value) {
+			booked = value;
 		};
 
-		this.addItem = function() {
-			items.push({ });
+		this.hasBeenBooked = function() {
+			return booked;
+		}
+ 
+		this.getTickets = function() {
+			return tickets;
 		};
 
-		this.removeItem = function() {
-			items.pop();
+		this.clearTickets = function() {
+			tickets = { };
+			total = 0;
+		};
+
+		this.getTicketsCount = function() {
+			return total;
+		};
+
+		this.getStageTicketsCount = function(id) {
+			if (tickets[id] === undefined) {
+				return 0;
+			}
+			return tickets[id].booked;
+		};
+
+		this.addTicket = function(id, stage) {
+			if (tickets[id] === undefined && stage !== undefined) {
+				tickets[id] = { stage: stage, booked: 0};
+			}
+			tickets[id].booked++;
+			total++;
+		};
+
+		this.removeTicket = function(id) {
+			if (tickets[id] === undefined) {
+				return;
+			}
+			if (tickets[id].booked === 0) {
+				return;
+			}
+			tickets[id].booked--;
+			total--;
 		};
 
 	});

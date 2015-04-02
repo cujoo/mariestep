@@ -4,7 +4,7 @@
 			<button type="button" class="navbar-toggle" ng-init="navCollapsed=true" ng-click="navCollapsed=!navCollapsed" data-toggle="collapse" data-target=".navbar-main-collapse">
 				<i class="fa fa-bars"></i>
 			</button>
-			<button type="button" class="navbar-toggle gifts-cart">
+			<button type="button" class="navbar-toggle gifts-cart" ng-class="{'no-gifts': gifts==0, 'highlight-gifts': gifts>0}" href ng-click="giftsCart()">
 				<i class="fa fa-gift fa-lg"></i> <span>{{ gifts }}</span>
 			</button>		
 			<a scroll-anchor class="navbar-brand" href="#page-top">
@@ -29,8 +29,8 @@
 					<a scroll-anchor href="#places">Cerimonia e oltre</a>
 				</li>
 				<li class="hidden-xs gifts-cart">
-					<a href="#">
-						<i class="fa fa-gift fa-lg"></i> {{ gifts }}
+					<a ng-class="{'no-gifts': gifts==0, 'highlight-gifts': gifts>0}" href ng-click="giftsCart()">
+						<i class="fa fa-gift fa-lg"></i> Il mio regalo (<span >{{ gifts }}</span>)
 					</a>
 				</li>				
 			</ul>

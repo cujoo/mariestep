@@ -56,11 +56,27 @@
 		i {
 			color: @dark;
 		}
+		.fa-minus-circle {
+			color: red;
+		}
+		.fa-exclamation-circle {
+			color: yellow;
+		}		
 	}
 
 	@media(min-width: @screen-sm-min) {
 		max-height: 400px;
 		font-size: 1.3em;
+	}
+
+	.warning {
+		text-shadow: 1px 1px 5px @dark;
+	}
+	.fa-minus-circle {
+		color: red;
+	}
+	.fa-exclamation-circle {
+		color: yellow;
 	}
 }
 
@@ -90,6 +106,12 @@
 		text-align: justify;
 		font-size: 13px;
 		margin: 0px 0px 15px;
+	}
+	p.disclaimer {
+		padding-top: 90px;
+		i {
+			color: @primary;
+		}
 	}
 	.btn-gift-container {
 		padding-bottom: 15px;
@@ -170,7 +192,7 @@
 				border-color: transparent;
 				text-shadow: 1px 1px 5px @dark;
 
-				&:hover {
+				&:hover, &:focus, &:active {
 					color: @primary;
 					border-color: transparent;
 					background-color: transparent;
@@ -262,26 +284,109 @@
 
 .stages-gifts {
 	position: absolute;
-	bottom: 110px;
+	top: 270px;
 
 	@media(min-width: @screen-sm-min) {
-		bottom: 120px;
+		top: 220px;
 	}
 
 	.booked-gifts {
 		text-align: left;
+		padding-top: 10px;
 		padding-left: 6px;
-		font-size: 16px;
-
+		font-size: 14px;
+		@media(min-width: @screen-sm-min) {		
+			font-size: 16px;
+		}
+		
+		ul {
+			list-style-type: none;
+			padding-left: 5px;
+			display: inline;
+			li {
+				display: inline;
+				padding-right: 7px;
+				i {
+					font-size: 0.7em;
+				}
+			}
+		}
 		.persons {
 			color: @primary;
 			font-weight: bold;
+			padding-left: 5px;
 		}
 	}
 
 	.toolbar {
-		text-align: left;
+		span {
+			display: inline-block;
+		}
+
+		.warning {
+			padding-top: 10px;
+			padding-left: 25px;
+			font-style: italic;
+			font-size: 0.8em;
+		}
+
 		padding-left: 6px;
+		text-align: left;
+		font-size: 14px;
+		@media(min-width: @screen-sm-min) {		
+			font-size: 16px;
+		}
+
+		.fa-ticket {
+			color: @primary;
+		}
+		.fa-minus-circle {
+			color: red;
+		}	
+		.fa-exclamation-circle {
+			color: yellow;
+		}
+
+		.fa-ticket.animated, .fa-minus-circle.animated, .fa-exclamation-circle.animated  {
+			-webkit-transition-property: -webkit-transform;
+			-webkit-transition-duration: 1s;
+			-moz-transition-property: -moz-transform;
+			-moz-transition-duration: 1s;
+			-webkit-animation-name: pulse;
+			-moz-animation-name: pulse;
+			-webkit-animation-duration: 1.5s;
+			-moz-animation-duration: 1.5s;
+			-webkit-animation-iteration-count: infinite;
+			-moz-animation-iteration-count: infinite;
+			-webkit-animation-timing-function: linear;
+			-moz-animation-timing-function: linear;
+		}
+
+		.btn {
+			font-family: "Indie Flower","Helvetica Neue",Helvetica,Arial,sans-serif;
+			text-transform: none;
+			padding: 0px;
+
+			font-size: 14px;
+			@media(min-width: @screen-sm-min) {		
+				font-size: 16px;
+			}
+		}
+		.btn-default {
+			color: @light;
+			border-color: transparent;
+			text-shadow: 1px 1px 5px @dark;
+
+			&:hover, &:focus, &:active {
+				color: @primary;
+				border-color: transparent;
+				background-color: transparent;
+			}
+
+			-webkit-transition: background .3s ease-in-out;
+			-moz-transition: background .3s ease-in-out;
+			transition: background .3s ease-in-out;
+		}		
 	}
 }
 
@@ -335,45 +440,6 @@
 		bottom: 0px;
 		padding-bottom: 10px;
 		font-size: 1.2em;
-	}
-}
-
-.btn-gift-container {
-	.btn-gift {
-		padding-left: 0px;
-		padding-right: 0px;
-		@media(min-width: @screen-sm-min) {
-			padding-left: 15px;
-			padding-right: 15px;
-		}
-
-		color: @primary;
-	}
-
-	.btn {
-		padding: 6px 0px;
-		font-size: 0.8em;
-		@media(min-width: @screen-sm-min) {
-			padding: 6px 12px;
-			font-size: 1em;
-		}
-	}
-	.btn-default {
-		color: @light;
-		border-color: transparent;
-		text-shadow: 1px 1px 5px @dark;
-
-		-webkit-transition: background .3s ease-in-out;
-		-moz-transition: background .3s ease-in-out;
-		transition: background .3s ease-in-out;
-
-		&:hover,
-		&:focus,
-		&:active {
-			color: @primary;
-			border-color: transparent;
-			background-color: transparent;
-		}
 	}
 }
 
