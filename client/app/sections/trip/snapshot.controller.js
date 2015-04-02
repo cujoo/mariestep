@@ -5,6 +5,7 @@ angular.module('marriageEventApp')
 		
 		$scope.stage = stage;
 		$scope.snapshot = snapshot;
+		$scope.descr = stage['ss_' + snapshot];
 
 		$scope.ok = function () {
 			$modalInstance.close();
