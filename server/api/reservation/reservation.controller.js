@@ -28,7 +28,7 @@ function createMail(reservation) {
 	simpleTxt += (total + ' per un totale di ' + (total * 25) + ' €.\n');
 	htmlTxt += '<p>L\'IBAN tramite cui effettuare il bonifico è <b>IT69G0760103200001007437815</b>. Grazie ancora per il tuo contributo, al 16 maggio!</b></html>';
 	simpleTxt += 'L\'IBAN tramite cui effettuare il bonifico è IT69G0760103200001007437815. Grazie ancora per il tuo contributo, al 16 maggio!\n';
-	htmlTxt += '<p>Marisol e Stefano leggeranno: </p><p><i>' + reservation.message + '</i></p>';
+	htmlTxt += '<br /><p>Marisol e Stefano leggeranno: </p><p><i>' + reservation.message + '</i></p>';
 	simpleTxt += 'Marisol e Stefano leggeranno: ' + reservation.message;
 	return {
 		text: simpleTxt, 
