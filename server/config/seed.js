@@ -4,6 +4,7 @@
  */
 
 'use strict';
+var mongoose = require('mongoose');
 
 var Stage = require('../api/stage/stage.model');
 var Reservation = require('../api/reservation/reservation.model');
@@ -85,10 +86,10 @@ Stage.find({}).remove(function() {
 		id 			: 7,
 		title		: 'Colca del Canyon',
 		info		: '<p>Il secondo più profondo del mondo, passando attraverso la riserva nazionale delle vigogne dove potremo ammirare el nevado Chucura, las lagunillas de Toqra y Patapampa, el Mirador de los Andes per poi rilassarci tra i bagni termali di Chivay.</p>',
-		t_free		: 30,
-		t_pending	: 0,
+		t_free		: 28,
+		t_pending	: 2,
 		t_booked	: 0,
-		t_persons	: [ ],
+		t_persons	: [ "Chiara e Flavio" ],
 		ss_1		: 'La valle nel Colca Canyon',
 		ss_2		: 'Mirador',
 		ss_3		: 'El Nevado Chucura',
@@ -109,10 +110,10 @@ Stage.find({}).remove(function() {
 		id 			: 9,
 		title		: 'Lago Titicaca',
 		info		: '<p>Eccoci tra Perù e Bolivia. Partendo da Puno attraverseremo il confine passando per il Lago Titicaca e l’isla del Sol, e infine metteremo i piedi sul suolo boliviano a Copacabana. Un ultimo sforzo tra le strade sterrate ci porterà a La Paz.</p>',
-		t_free		: 30,
-		t_pending	: 0,
+		t_free		: 28,
+		t_pending	: 2,
 		t_booked	: 0,
-		t_persons	: [ ],
+		t_persons	: [ "Chiara e Flavio" ],
 		ss_1		: 'Veduta dall’alto del Lago Titicaca',
 		ss_2		: 'Copacabana',
 		ss_3		: 'Isla del Sol',
@@ -145,10 +146,10 @@ Stage.find({}).remove(function() {
 		id 			: 12,
 		title		: 'Cuzco',
 		info		: '<p>Da Uyuni di nuovo in Perù atterrando a Cuzco, la capitale storica del Perù. Affronteremo un bellissimo tour che ci porterà a visitare il centro storico e le rovine che si trovano nei dintorni.</p>',
-		t_free		: 30,
-		t_pending	: 0,
+		t_free		: 28,
+		t_pending	: 2,
 		t_booked	: 0,
-		t_persons	: [ ],
+		t_persons	: [ "Chiara e Flavio" ],
 		ss_1		: 'Veduta dall’alto di Cuzco',
 		ss_2		: 'Cuzco di notte',
 		ss_3		: 'Chiesa della Compagnia',
@@ -157,10 +158,10 @@ Stage.find({}).remove(function() {
 		id 			: 13,
 		title		: 'Machu Picchu',
 		info  		: '<p>È tutto pronto. Sveglia prestissimo e partenza da Aguascalientes per ammirare l’alba dalla cima della montagna che ospita la città perduta degli Inca, e perché no, farsi un selfie con un alpaca!</p>',
-		t_free		: 30,
-		t_pending	: 0,
+		t_free		: 28,
+		t_pending	: 2,
 		t_booked	: 0,
-		t_persons	: [ ],
+		t_persons	: [ "Chiara e Flavio" ],
 		ss_1		: 'Il sito di Machu Picchu',
 		ss_2		: 'Aguascalientes',
 		ss_3		: 'La città perduta',
@@ -168,4 +169,30 @@ Stage.find({}).remove(function() {
 	});
 });
 
-Reservation.find({}).remove(function() { });
+Reservation.find({}).remove(function() {
+	Reservation.create({
+		_id: mongoose.Types.ObjectId(),
+		persons: "Chiara e Flavio",
+		email: "chiaramazzei9@gmail.com",
+		message: "Che il vostro viaggio sia ricco e illuminato, come la vostra vita insieme. Auguri di una vita davvero felice e piena. Con grande affetto, Chiara & Flavio",
+		date: new Date("16/4/2015 17:22:33"),
+		gifts: [{
+			stageId: 7,
+			stageName: "Colca del Canyon",
+			tickets: 2
+		}, {
+			stageId: 9,
+			stageName: "Lago Titicaca",
+			tickets: 2
+		}, {
+			stageId: 12,
+			stageName: "Cuzco",
+			tickets: 2
+		}, {
+			stageId: 13,
+			stageName: "Machu Picchu",
+			tickets: 2
+		}]
+	});
+});
+
