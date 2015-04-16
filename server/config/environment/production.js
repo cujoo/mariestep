@@ -21,5 +21,5 @@ module.exports = {
 				'mongodb://localhost/marriageevent'
 	},
 
-	seedDB: true
+	seedDB: false
 };
